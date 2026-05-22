@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firma Electrónica Avanzada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>🔐 Firma Electrónica Avanzada</h1>
+
+    <div class="formulario">
+      <input type="text" id="firmante" placeholder="Nombre del firmante">
+      <input type="file" id="archivo">
+
+      <h3>Firma del usuario</h3>
+
+      <canvas id="firmaCanvas" width="400" height="150"></canvas>
+
+      <br><br>
+
+      <button onclick="limpiarFirma()">Limpiar Firma</button>
+
+      <div class="botones">
+        <button onclick="generarHash()">Generar Hash</button>
+        <button onclick="firmarDocumento()">Firmar</button>
+        <button onclick="verificarFirma()">Verificar</button>
+        <button onclick="limpiarFormulario()">Limpiar</button>
+        <button onclick="eliminarFirmas()">Eliminar Registros</button>
+        <button onclick="descargarComprobante()">Descargar Comprobante</button>
+      </div>
+    </div>
+
+    <div id="resultado" class="resultado"></div>
+
+    <h2>📄 Documentos Firmados</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Firmante</th>
+          <th>Archivo</th>
+          <th>Fecha</th>
+          <th>Hash</th>
+        </tr>
+      </thead>
+      <tbody id="tablaFirmas"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
